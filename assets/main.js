@@ -8,14 +8,14 @@ $(function(){
 
     function startTimer(){
         cdown = setInterval(()=>{
-            valTimer--;
-            $('#cnber').text(valTimer);
+            valTimer--
+            $('#cnber').text(valTimer)
             if(valTimer === 60){
-                $('#cnber').css("color", "orange");
+                $('#cnber').css("color", "orange")
                 audioPlayer1.play()
             }
-            if(valTimer === 20){
-                $('#cnber').css("color", "red");
+            if(valTimer === 30){
+                $('#cnber').css("color", "red")
                 audioPlayer1.play()
             }
             if(valTimer === 0){
@@ -34,17 +34,17 @@ $(function(){
             audioPlayer1.play()
             $('#btn-start').hide()
             setTimeout(() => {
-                $('#btn-reset').show();
+                $('#btn-reset').show()
             }, 5000)
     })
 
     $('#btn-reset').on('click', ()=>{
         stopTimer()
-        valTimer = 15
-        $('#cnber').text(valTimer);
+        valTimer = 120
+        $('#cnber').text(valTimer)
         $('#btn-reset').hide()
         $('#btn-start').show()
-        $('#cnber').css("color", "black");
+        $('#cnber').css("color", "black")
     })
 
 })
